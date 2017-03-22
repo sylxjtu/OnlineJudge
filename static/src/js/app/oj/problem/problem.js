@@ -144,6 +144,7 @@ require(["jquery", "codeMirror", "csrfToken", "bsAlert", "ZeroClipboard"],
             if (code.indexOf("public class Main") > -1||code.indexOf("System.out.print") > -1) {
                 return ["3"];
             }
+            return [];
         }
 
         function getServerTime(){
