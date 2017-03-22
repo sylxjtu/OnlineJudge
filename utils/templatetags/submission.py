@@ -26,7 +26,7 @@ def translate_signal(value):
 
 
 def translate_language(value):
-    return {1: "C", 2: "C++", 3: "Java"}[value]
+    return {1: "C", 2: "C++", 3: "Java", 4: "C++14"}[value]
 
 
 def translate_result_class(value):
