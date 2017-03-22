@@ -13,7 +13,7 @@ define("spj", ["avalon", "bsAlert"], function (avalon, bsAlert) {
         '<label class="text">' +
         '<input type="radio" name="spjLanguage" value="1" ms-duplex-string="spjLanguage"> C ' +
         '<input type="radio" name="spjLanguage" value="2" ms-duplex-string="spjLanguage"> C++' +
-        '<input type="radio" name="spjLanguage" value="3" ms-duplex-string="spjLanguage"> Clang' +
+        '<input type="radio" name="spjLanguage" value="4" ms-duplex-string="spjLanguage"> Clang' +
         '</label>' +
         '</div>' +
         '</div>' +
