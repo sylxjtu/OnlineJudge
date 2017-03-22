@@ -134,15 +134,15 @@ require(["jquery", "codeMirror", "csrfToken", "bsAlert", "ZeroClipboard"],
         function guessLanguage(code) {
             //cpp
             if (code.indexOf("using namespace std") > -1||code.indexOf("<cstdio>") > -1) {
-                return "2";
+                return ["2", "4"];
             }
             if (code.indexOf("printf") > -1||code.indexOf("<stdio.h>") > -1)
             {
-                return "1";
+                return ["1"];
             }
             //java
             if (code.indexOf("public class Main") > -1||code.indexOf("System.out.print") > -1) {
-                return "3";
+                return ["3"];
             }
         }
 
@@ -189,13 +189,13 @@ require(["jquery", "codeMirror", "csrfToken", "bsAlert", "ZeroClipboard"],
                 return false;
             }
 
-            if (guessLanguage(code) != language) {
+            if (!(language in guessLanguage(code))) {
                 if (!confirm("您选择的代码语言可能存在错误，是否继续提交？")) {
                     return;
                 }
             }
 
-            if (language < 3) {
+            if (language != 3) {
                 if (code.indexOf("__int64") > -1) {
                     if (!confirm("您是否在尝试使用'__int64'类型? 这不是 C/C++ 标准并将引发编译错误，可以使用'long long'代替，详见帮助。是否继续提交？")) {
                         return;
