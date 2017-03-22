@@ -35,7 +35,7 @@ languages = {
                            "-XX:PermSize=8M -Xms16M -Xmx{max_memory} -Djava.security.manager "
                            "-Djava.security.policy==policy -Djava.awt.headless=true Main",
         "use_sandbox": False
-    }
+    },
     4: {
         "name": "clang",
         "src_name": "main.cpp",
