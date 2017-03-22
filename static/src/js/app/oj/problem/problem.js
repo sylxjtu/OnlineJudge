@@ -189,7 +189,7 @@ require(["jquery", "codeMirror", "csrfToken", "bsAlert", "ZeroClipboard"],
                 return false;
             }
 
-            if (!(language in guessLanguage(code))) {
+            if (guessLanguage(code).indexOf(language) == -1) {
                 if (!confirm("您选择的代码语言可能存在错误，是否继续提交？")) {
                     return;
                 }
