@@ -8,7 +8,7 @@ languages = {
         "code": 1,
         "compile_max_cpu_time": 3000,
         "compile_max_memory": 128 * 1024 * 1024,
-        "compile_command": "/usr/bin/gcc -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c99 {src_path} -lm -o {exe_path}/main",
+        "compile_command": "/usr/bin/gcc -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c99 {src_path} -lm -Wl,--stack=268435456 -o {exe_path}/main",
         "spj_compile_command": "/usr/bin/gcc -DONLINE_JUDGE -O2 -Werror -fmax-errors=3 -std=c99 {src_path} -lm -o {exe_path}",
         "execute_command": "{exe_path}/main",
         "use_sandbox": True
