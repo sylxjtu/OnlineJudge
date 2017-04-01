@@ -14,6 +14,8 @@ RUN mkdir -p /var/judger/run/ && mkdir /var/judger/test_case/ && mkdir /var/judg
 RUN chmod -R 777 /var/judger/run/
 COPY policy /var/judger/run/
 COPY supervisord.conf /etc
+# Set stack limit
+RUN ulimit -s unlimited
 RUN pip install supervisor
 WORKDIR /var/judger/code/judge/
 EXPOSE 8080
